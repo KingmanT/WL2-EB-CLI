@@ -14,15 +14,16 @@ pipeline {
         stage ('Test') {
             steps {
                 sh '''#!/bin/bash
-                echo "This is a test stage"
+                ./test.sh
                 '''
             }
         }
     stage ('Deploy') {
             steps {
                 sh '''#!/bin/bash
-                source venv/bin/activate
-                eb create workload2-2 --single
+                #source venv/bin/activate
+                #eb create workload2-2 --single
+                echo "this is the deploy stage"
                 '''
             }
         }
