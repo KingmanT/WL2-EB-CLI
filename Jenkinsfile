@@ -17,11 +17,6 @@ pipeline {
                 echo "This is a test stage"
                 '''
             }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
         }
     stage ('Deploy') {
             steps {
