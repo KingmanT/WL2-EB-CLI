@@ -14,6 +14,7 @@ pipeline {
         stage ('Test') {
             steps {
                 sh '''#!/bin/bash
+                chmod +x test.sh
                 ./test.sh
                 '''
             }
