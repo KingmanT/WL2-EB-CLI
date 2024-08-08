@@ -14,8 +14,6 @@ pipeline {
         stage ('Test') {
             steps {
                 sh '''#!/bin/bash
-                #source venv/bin/activate
-                #py.test --verbose --junit-xml test-reports/results.xml
                 echo "This is a test stage"
                 '''
             }
